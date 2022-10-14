@@ -1,0 +1,55 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%> 
+   <%@ page import="java.util.Date" %> <!-- 페이지 디렉티브 (반드시 있어야함)--> 
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>웹 문서 테스트</title>
+</head>
+<body>
+
+<%! //선언문 = 객체, 변수, 메소드 선언시
+	int[] jumsu = {50,80,70};
+	String[] names = {"김", "이", "박"};
+	int a = 20;
+	int b = 30;
+	Date now = new Date();
+	
+ %>
+ <hr>
+<%
+	//처리 구문 -> 스크립트릿(scriptlet) : 자바 코드/명령어
+	int c = a + b;
+	String name = "킹도연";
+	if(a>b){
+		c = a;
+	} else {
+		c = b;
+	}
+	for(int d=0;d<10;d++){
+		out.println(name+d); //out: 출력개체를 의미 browser
+	}
+	out.println("c 출력은 표현식");
+	out.println(now);
+	
+	//<%!--<%=c <- 얘를 표현식이라고 함  --%>
+
+<div id="result"><!--각주 -->
+<%=c %>
+<hr>
+<%=now %>
+<ul>
+<%
+	for(int e=0;e<3;e++){
+%>
+<li><%names[e] %> : <%=jumsu[e] %></li>
+<%
+		
+		
+	}
+%>
+</ul>
+</div> 
+</body>
+</html>

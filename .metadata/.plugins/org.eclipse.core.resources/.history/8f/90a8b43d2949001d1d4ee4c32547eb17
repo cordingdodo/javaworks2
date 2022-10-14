@@ -1,0 +1,37 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+   <%@ page import="java.util.Date" %>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>웹 문서 테스트</title>
+</head>
+<body>
+
+<%! //선언문 = 객체, 변수, 메소드 선언시
+	int a = 20;
+	int b = 30;
+	Date now = new Date();
+	
+ %>
+ <hr>
+<%
+	//처리 구문 -> 스크립트릿(scriptlet) : 자바 코드/명령어
+	int c = a + b;
+	String name = "킹도연";
+	if(a>b){
+		c = a;
+	} else {
+		c = b;
+	}
+	for(int d=0;d<10;d++){
+		out.println(name+d); //out: 출력개체를 의미 browser
+	}
+	//<%!-- --%>
+%>
+<div id="result"><!--각주 --><%=c %>
+<!-- jsp 각주 -->
+</div> 
+</body>
+</html>

@@ -14,5 +14,4 @@ public class Ex1 {
 		st1.setEng(80);
 		System.out.println("st1의 학생 이름은"+st1.getName());
 	}
-
 }

@@ -124,7 +124,7 @@
              Note: The pattern used is equivalent to using pattern="common" -->
         <Valve className="org.apache.catalina.valves.AccessLogValve" directory="logs" pattern="%h %l %u %t &quot;%r&quot; %s %b" prefix="localhost_access_log" suffix=".txt"/>
 
-      <Context docBase="D:\dodo\javaworks\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\ROOT" path="" reloadable="false"/><Context docBase="D:\dodo\javaworks\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\test01" path="/test01" reloadable="true" source="org.eclipse.jst.jee.server:test01"/><Context docBase="D:\dodo\javaworks\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\test02" path="/test02" reloadable="true" source="org.eclipse.jst.jee.server:test02"/></Host>
+      <Context docBase="D:\dodo\javaworks2\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\ROOT" path="" reloadable="false"/><Context docBase="D:\dodo\javaworks2\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\practice01" path="/practice01" reloadable="true" source="org.eclipse.jst.jee.server:practice01"/><Context docBase="D:\dodo\javaworks2\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\test02" path="/test02" reloadable="true" source="org.eclipse.jst.jee.server:test02"/></Host>
     </Engine>
   </Service>
 </Server>

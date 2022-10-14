@@ -1,0 +1,13 @@
+127.0.0.1 - - [14/Oct/2022:13:40:49 +0900] "GET / HTTP/1.1" 404 994
+0:0:0:0:0:0:0:1 - - [14/Oct/2022:13:40:49 +0900] "GET /practice01/test01.jsp HTTP/1.1" 302 -
+0:0:0:0:0:0:0:1 - - [14/Oct/2022:13:40:49 +0900] "GET /practice01/index.jsp?msg=id%20:%20null,%20pw%20:%20null,%20name%20:%20null HTTP/1.1" 200 1149
+0:0:0:0:0:0:0:1 - - [14/Oct/2022:13:40:49 +0900] "GET /favicon.ico HTTP/1.1" 404 1016
+0:0:0:0:0:0:0:1 - - [14/Oct/2022:13:43:19 +0900] "GET /practice01/test02.jsp HTTP/1.1" 302 -
+0:0:0:0:0:0:0:1 - - [14/Oct/2022:13:43:19 +0900] "GET /practice01/index.jsp?msg=id%20:%20null,%20pw%20:%20null,%20name%20:%20null HTTP/1.1" 200 1149
+0:0:0:0:0:0:0:1 - - [14/Oct/2022:13:43:34 +0900] "POST /practice01/test02.jsp HTTP/1.1" 302 -
+0:0:0:0:0:0:0:1 - - [14/Oct/2022:13:43:34 +0900] "GET /practice01/index.jsp?msg=id%20:%20admin,%20pw%20:%201234,%20name%20: HTTP/1.1" 200 1145
+0:0:0:0:0:0:0:1 - - [14/Oct/2022:13:45:13 +0900] "GET /practice01/index.jsp HTTP/1.1" 200 1094
+0:0:0:0:0:0:0:1 - - [14/Oct/2022:13:45:15 +0900] "GET /practice01/test01.jsp?id=kdy&pw=1234&name=%EA%B9%80%EB%8D%94%EC%97%B0 HTTP/1.1" 302 -
+0:0:0:0:0:0:0:1 - - [14/Oct/2022:13:45:15 +0900] "GET /practice01/index.jsp?msg=id%20:%20kdy,%20pw%20:%201234,%20name%20:%20??? HTTP/1.1" 200 1147
+0:0:0:0:0:0:0:1 - - [14/Oct/2022:13:45:16 +0900] "GET /practice01/test01.jsp?id=kdy&pw=1234&name=%EA%B9%80%EB%8D%94%EC%97%B0 HTTP/1.1" 302 -
+0:0:0:0:0:0:0:1 - - [14/Oct/2022:13:45:16 +0900] "GET /practice01/index.jsp?msg=id%20:%20kdy,%20pw%20:%201234,%20name%20:%20??? HTTP/1.1" 200 1147
