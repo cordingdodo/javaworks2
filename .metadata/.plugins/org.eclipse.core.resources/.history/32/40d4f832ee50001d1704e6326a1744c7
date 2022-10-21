@@ -1,0 +1,28 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+	pageContext.setAttribute("pagedata", "pageContext");
+	request.setAttribute("requestdata", "request");
+	session.setAttribute("sessiondata", "session");
+	application.setAttribute("applicationdata", "application");
+	application.setAttribute("msg", "감사합니다.");
+	//application.setInitParameter("memberId", "kbs"); //데이터 두개라서 안됨
+	out.println("uest id: "+application.getInitParameter("userId"));
+	//out.println("member id : "+application.getInitParameter("memberId"));
+	out.println("msg: "+application.getAttribute("msg"));
+	
+	out.println("<h3>페이지</h3>"+pageContext.getAttribute("pagedata"));
+	out.println("<h3>리퀘스트</h3>"+request.getAttribute("requestdata"));
+	out.println("<h3>세션</h3>"+session.getAttribute("sessiondata"));
+	out.println("<h3>어플리케이션</h3>"+application.getAttribute("applicationdata"));
+	out.println("<h3>어플리케이션 메세지</h3>"+application.getAttribute("msg"));
+	out.println("<a href='test08.jsp?msg=테스트08로갑니다'>테스트08</a>");
+</body>
+</html>

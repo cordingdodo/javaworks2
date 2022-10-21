@@ -1,0 +1,46 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<%@ page import="java.util.*"  %>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>jsp - java 객체 제어..</title>
+</head>
+<body>
+<% 
+
+	List<String> lst = new ArrayList<>();
+	lst.add("김도연");
+	lst.add("박주주");
+	lst.add("박주엉");
+	lst.add("도욘");
+	request.setAttribute("lst", lst);
+	//request.setAttribute("lst0", lst.get(0)); 여러개중 하나만 담는것
+	
+	Set<String> set = new HashSet<>();
+	//set은 순서제어가 안됨
+	set.add("강도연");
+	set.add("강도연2");
+	set.add("강도연3");
+	set.add("강도연4");
+	request.setAttribute("set", set);
+	
+	Map map = new HashMap<>();
+	map.put("test1", "김도도");
+	map.put("test2", "김도도2");
+	map.put("test3", "김도도3");
+	map.put("test4", "김도도4");
+	request.setAttribute("map", map);
+	request.setAttribute("map0", "test1");
+	
+	
+	//전송 받을 목적 페이지지정 /보낼곳 지정
+	RequestDispatcher rd = request.getRequestDispatcher("test07.jsp");
+	//해당 목적 페이지에 request.setAttribute()한 데이터를 포워딩(전달)
+	rd.forward(request, response); 
+	
+%>
+
+</body>
+</html>

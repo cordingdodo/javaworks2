@@ -1,0 +1,36 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>전송 받은 데이터를 처리하여 출력</title>
+</head>
+<body>
+<%
+	request.setCharacterEncoding("UTF-8");
+	String name = request.getParameter("name");
+	String addr = request.getParameter("addr");
+	int age = Integer.parseInt(request.getParameter("age"));
+	//int age2 = (int)(request.getParameter("age")); 이건 안됨! integer.parseInt로
+	String[] pet = request.getParameterValues("pet"); //배열 불러올 수 있음
+	ArrayList<String> = new ArrayList<>(); //컬렉션 불러올 수 있음
+	for(i=0;i<pet.length;i++){
+		1st.add(pet[i]); //add로 추가해줘야함
+	}
+	String female = request.getParameter("female");
+	
+%>
+이름: <%=name %><br> 
+주소 : <%=addr %><br>
+나이: <%=age %><br>
+좋아하는 동물 : <br> 
+<% 
+	for(int i=0;i<pet.length;i++){
+		out.println(pet[i]+"<br>");
+	}
+%>
+
+
+</body>
+</html>

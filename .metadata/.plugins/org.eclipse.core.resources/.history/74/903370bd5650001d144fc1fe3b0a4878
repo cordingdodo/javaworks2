@@ -1,0 +1,20 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<%@ page import="java.util.*"  %>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<%
+	//문자로 가기 때문에 형변환 해줘야함
+	ArrayList<String> lst = (ArrayList<String>) request.getAttribute("lst");
+	HashSet<String> set = (HashSet<String>) request.getAttribute("set");
+	HashMap map = (HashMap) request.getAttribute("map");	
+	
+	//test06.jsp이라고 표시되는데 test07데이터가 나옴
+%>
+</body>
+</html>

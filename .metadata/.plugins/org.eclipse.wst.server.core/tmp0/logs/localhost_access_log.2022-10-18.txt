@@ -1,0 +1,17 @@
+127.0.0.1 - - [18/Oct/2022:11:54:59 +0900] "GET / HTTP/1.1" 404 994
+0:0:0:0:0:0:0:1 - - [18/Oct/2022:11:55:00 +0900] "GET /practice01/test05.jsp HTTP/1.1" 500 2753
+0:0:0:0:0:0:0:1 - - [18/Oct/2022:11:55:00 +0900] "GET /favicon.ico HTTP/1.1" 404 1016
+0:0:0:0:0:0:0:1 - - [18/Oct/2022:11:55:06 +0900] "GET /practice01/loginForm.html HTTP/1.1" 200 499
+0:0:0:0:0:0:0:1 - - [18/Oct/2022:11:55:10 +0900] "POST /practice01/test05.jsp HTTP/1.1" 200 189
+0:0:0:0:0:0:0:1 - - [18/Oct/2022:11:56:02 +0900] "POST /practice01/test05.jsp HTTP/1.1" 200 241
+0:0:0:0:0:0:0:1 - - [18/Oct/2022:11:57:04 +0900] "POST /practice01/test05.jsp HTTP/1.1" 200 254
+0:0:0:0:0:0:0:1 - - [18/Oct/2022:11:57:13 +0900] "POST /practice01/test05.jsp HTTP/1.1" 200 254
+0:0:0:0:0:0:0:1 - - [18/Oct/2022:12:09:58 +0900] "GET /practice01/loginform.html HTTP/1.1" 404 1044
+0:0:0:0:0:0:0:1 - - [18/Oct/2022:12:10:09 +0900] "GET /practice01/loginform.html HTTP/1.1" 404 1044
+0:0:0:0:0:0:0:1 - - [18/Oct/2022:12:10:12 +0900] "POST /practice01/test05.jsp HTTP/1.1" 200 254
+0:0:0:0:0:0:0:1 - - [18/Oct/2022:12:10:16 +0900] "POST /practice01/test05.jsp HTTP/1.1" 200 254
+0:0:0:0:0:0:0:1 - - [18/Oct/2022:12:11:09 +0900] "GET /practice01/test02.jsp HTTP/1.1" 302 -
+0:0:0:0:0:0:0:1 - - [18/Oct/2022:12:11:09 +0900] "GET /practice01/index.jsp?msg=id%20:%20null,%20pw%20:%20null,%20name%20:%20null HTTP/1.1" 200 1268
+0:0:0:0:0:0:0:1 - - [18/Oct/2022:12:11:13 +0900] "GET /practice01/login.jsp HTTP/1.1" 200 740
+0:0:0:0:0:0:0:1 - - [18/Oct/2022:12:11:18 +0900] "POST /practice01/loginPro.jsp HTTP/1.1" 302 -
+0:0:0:0:0:0:0:1 - - [18/Oct/2022:12:11:18 +0900] "GET /practice01/index.jsp HTTP/1.1" 200 1194

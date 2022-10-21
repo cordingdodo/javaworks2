@@ -1,0 +1,18 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<%@ page import="java.util.*"  %>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<%
+	//문자로 가기 때문에 형변환 해줘야함
+	List<String> lst = (ArrayList<String>) request.getAttribute("lst");
+	Set<String> set = request.getAttribute("set");
+	
+%>
+</body>
+</html>

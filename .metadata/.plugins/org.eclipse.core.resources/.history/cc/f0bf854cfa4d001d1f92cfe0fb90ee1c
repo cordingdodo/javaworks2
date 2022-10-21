@@ -1,0 +1,79 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<%@ page import="java.util.*" %>
+<%@page import = "java.util.Enumeration"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>전송 받은 데이터를 처리하여 출력</title>
+</head>
+<body>
+<%
+	request.setCharacterEncoding("UTF-8");
+	String name = request.getParameter("name");
+	String addr = request.getParameter("addr");
+	int age = Integer.parseInt(request.getParameter("age"));
+	//int age2 = (int)(request.getParameter("age")); 이건 안됨! integer.parseInt로
+	String[] pet = request.getParameterValues("pet"); //배열 불러올 수 있음
+	ArrayList<String> lst = new ArrayList<>(); //컬렉션 불러올 수 있음
+	for(int i=0;i<pet.length;i++){
+		lst.add(pet[i]); //add로 추가해줘야함
+	}
+	String female = request.getParameter("female");
+	String area = request.getParameter("area");
+	
+%>
+이름: <%=name %><br> 
+주소 : <%=addr %><br>
+나이: <%=age %><br>
+좋아하는 동물 : <br> 
+<% 
+	for(int i=0;i<pet.length;i++){
+		out.println(pet[i]+"<br>");
+	}
+%>
+
+좋아하는 동물 2 :<br>
+<%
+	for(int i=0;i<pet.length;i++){
+		out.println(lst.get(i)+"<br>"); //출력해서 가져올땐 get
+	}
+%>
+
+
+성별 : <%=female %><br>
+선택 지역: <%=area %><br>
+<br><hr><br>
+프로토콜: <%=request.getProtocol() %><br>
+요청된 서버이름: <%=request.getServerName() %><br>
+요청방식 : <%=request.getMethod() %><br>
+파라미터명: <%=request.getQueryString() %><br>
+요청주소: <%=request.getRequestURL() %><br>
+요청URI: <%=request.getRequestURI() %><br>
+서버이름: <%=request.getRemoteHost() %><br>
+서버주소: <%=request.getRemoteAddr() %><br>
+서버포트: <%=request.getRemotePort() %><br>
+서버포트2: <%=request.getServerPort() %><br>
+현재 문서의 경로: <%=request.getContextPath() %><br>
+어셉트(accept): <%=request.getHeader("Accept") %><br>
+호스트(host) : <%=request.getHeader("host") %><br>
+<br>
+<h3>헤더 정보 예제</h3>
+<table>
+	<tr><td>헤더이름</td><td>헤더값</td></tr>
+	<%
+	Enumeration e = request.getHeaderNames();
+	while(e.hasMoreElements()) {
+		String headerName = (String)e.nextElement(); 
+	%>
+	<tr>
+		<td><%=headerName %></td>
+		
+	</tr>
+	<%
+	}
+	%>
+</table>
+</body>
+</html>

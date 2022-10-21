@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+	xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
+	id="WebApp_ID" version="3.1">
+	<display-name>practice01</display-name>
+	<welcome-file-list>
+		<welcome-file>index.html</welcome-file>
+		<welcome-file>index.htm</welcome-file>
+		<welcome-file>index.jsp</welcome-file>
+		<welcome-file>default.html</welcome-file>
+		<welcome-file>default.htm</welcome-file>
+		<welcome-file>default.jsp</welcome-file>
+	</welcome-file-list>
+	
+	<context-param>
+		<description>전역변수설정</description>
+		<param-name>userId</param-name>
+		<param-value>kdy</param-value>
+		</context-param>
+		
+	<!-- 에러처리 : 예외처리 or 상태코드를 활용하여 예외(에러)가 발생할 경우 해당 에러 페이지를 뜨게함 -->
+	<error-page>
+		<exception-type>java.lang.NumberFormatException</exception-type>
+		<location>/errorPage.jsp</location>
+	</error-page>
+		<error-page>
+		<exception-type>java.lang.Exception</exception-type>
+		<location>/errorPage.jsp</location>
+	</error-page>
+	<error-page>
+		<error-code>500</error-code>
+		<location>/errorPage.jsp</location>
+	</error-page>
+	<error-page>
+		<error-code>404</error-code>
+		<location>/notFoundErrorPage.jsp</location>
+	</error-page>
+</web-app>

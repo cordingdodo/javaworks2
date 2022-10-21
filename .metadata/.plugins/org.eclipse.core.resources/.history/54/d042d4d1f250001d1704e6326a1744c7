@@ -1,0 +1,20 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<%  pageContext.setAttribute("name", "도도");
+	pageContext.setAttribute("age", "13");
+%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>include 받아오기</title>
+</head>
+<body>
+	<h2>pageContext</h2>
+	<h5>디렉티브로 포함된 파일 -> 자체 컴파일되어서 가져옴</h5>
+	<%@ include file="includeFile.jsp" %>
+	<h5>액션태그로 포함된 파일 -> 가져와서 컴파일됨</h5>
+	<jsp:include page="includeFile.jsp"></jsp:include>
+	<h3>결론: pageContext는 include로 파일/값을 넘길 수 있다</h3>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<%@ page import="java.util.*"  %>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>jsp - java 객체 제어..</title>
+</head>
+<body>
+<% 
+
+	List<String> lst = new ArrayList<>();
+	lst.add("김도연");
+	lst.add("박주주");
+	lst.add("박주엉");
+	lst.add("도욘");
+	request.setAttribute("lst", lst);
+	
+	Set<String> set = new HashSet<>();
+	set.add("강도연");
+	set.add("강도연2");
+	set.add("강도연3");
+	set.add("강도연4");
+	request.setAttribute("set", set);
+	
+	
+%>
+
+</body>
+</html>

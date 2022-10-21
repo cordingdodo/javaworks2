@@ -1,0 +1,15 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>jps - pageContext 아웃객체</title>
+</head>
+<body>
+<%
+	JspWriter pageOut = pageContext.getOut();
+	System.out.println(pageOut == out);
+%>
+</body>
+</html>

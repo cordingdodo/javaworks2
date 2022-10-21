@@ -1,0 +1,10 @@
+package com.website.dto;
+
+public class Mem {
+	private String id;
+	private String pw;
+	private String name;
+	private String email;
+	private String tel;
+	private String regdate;
+}

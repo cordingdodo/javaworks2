@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>입력 데이터 처리와 주고 받기</title>
+</head>
+<body>
+<form name="indata" action="test04.jsp" method="post">
+	이름: <input type="text" name="name"><br><br>
+	주소: <input type="text" name="addr"<br><br>
+	나이: <input typet="number" name="age"<br><br>
+	<fieldset>
+		<legende>내가 좋아하는 동물</legende>
+		<input type="checkbox" name="pet" value="dog">강아지<br><br>
+		<input type="checkbox" name="pet" value="cat">고양이<br><br>
+		<input type="checkbox" name="pet" value="pig">강아지<br><br>
+		<input type="checkbox" name="pet" value="horse">망아지지<br><br>
+	</fieldset>
+	<fieldset></fieldset>
+</form>
+
+</body>
+</html>

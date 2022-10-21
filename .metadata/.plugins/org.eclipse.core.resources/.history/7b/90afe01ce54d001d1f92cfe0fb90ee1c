@@ -1,0 +1,50 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>jps - pageContext 아웃객체</title>
+</head>
+<body>
+<%
+	//pagecontext 객체란? 현재 페이지에 있는 객체에 대한 값을 모두 다 저장하고 관리하는 객체 
+			//그래서 scope가 가장 협소한 객체임
+	JspWriter pageOut = pageContext.getOut();
+	System.out.println(pageOut == out);
+	
+	ServletRequest pageRequest = pageContext.getRequest();
+	System.out.println(pageRequest == request);
+	
+	ServletResponse pageResponse = pageContext.getResponse();
+	System.out.println(pageResponse == response);
+	
+	HttpSession pageSession = pageContext.getSession();
+	System.out.println(pageSession == session);
+	
+	ServletContext pageServlet = pageContext.getServletContext();
+	System.out.println(pageServlet == application); //아웃객체
+	
+	ServletConfig pageConfig = pageContext.getServletConfig();
+	System.out.println(pageConfig == config);
+	
+	Exception pageException = pageContext.getException();
+	//System.out.println(pageException == exception);
+	
+	Object pageObject = 
+%>
+
+<%
+String str = request.getParameter("str"); //test03?str=
+if(str.equals("incliude")){ 
+	pageContext.include("target.jsp"); //현재페이지에 타겟.jsp를  넣어라(인클루드해라)//내용받는 목표
+} else if(str.equals("forward")){
+	pageContext.forward("target.jsp"); //현재 페이지를 타겟.jsp를 내용을 전송 //값을 주고받기 때문에 얘를 많이씀
+} else {
+	out.println("<h2>잘못된 값</h2>");
+}
+%>	
+
+
+</body>
+</html>

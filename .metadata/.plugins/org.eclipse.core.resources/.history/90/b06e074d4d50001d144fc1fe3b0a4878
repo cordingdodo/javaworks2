@@ -1,0 +1,36 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>jsp - response 객체</title>
+</head>
+<body>	
+<%
+	request.setCharacterEncoding("UTF-8");
+	response.setContentType("text/html; charset=UTF-8");//보내질 데이터 선택? 더마니씀
+	//response.setCharacterEncoding("UTF-8");
+	String id = request.getParameter("id");
+	String pw = request.getParameter("pw");
+
+	if(id.equals("admin") && pw.equals("1234")){
+		//만약 아이디와 비밀번호가 맞으면 로그인처리하고 login_ok.jsp로 이동,
+		session.setAttribute("id", id);
+		out.println("<a href='login_ok.jsp?msg=로그인 성공치치'>로그인 성공</a>");
+		//response.sendRedirect("login_ok.jsp");
+	} else {	
+		//일치하지 않으면 원래 페이지로 loginform.html돌아감
+		response.sendRedirect("login_form.html");
+		response.sendError(505, "너 틀림");
+		response.sendError(404); //현재 처리된 내용의 상태코드를 설정
+		response.sendError(404, "해당 페이지가 존재하지 않습니다."); //에러발생할 경우 해당 상태 코드에 메세지 보냄
+	}
+	
+%>
+	<p> 콘텐츠 유형 : <%=response.getContentType() %>
+	<P> 문자 인코딩: 출력하긔긔긔 <%=response.getCharacterEncoding() %>
+	
+
+</body>
+</html>
